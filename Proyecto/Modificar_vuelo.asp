@@ -36,23 +36,48 @@
 		<canvas></canvas>
 		<canvas></canvas>
 	</div>
-	<h1> Sitio de Administradores </h1>
-	<table class="fa-table">
-		<tr>
-			<th> IDAVION </th>
-			<th> AVION </th>
-			<th> N_PLAZAS </th>
-			<th> PRECIO_BASE </th>
-		</tr>
+	
+<%
 
-	<% 
-		Set origen = Conexion.Execute("select IDAVION, AVION, N_PLAZAS, PRECIO_BASE from AVION")
-		do while not origen.EOF
-			Response.Write("<tr><td><center><a href=Modificar_vuelo.asp?idavion=" & origen("IDAVION") & ">" & origen("IDAVION") & "</a></center></td><td>" & origen("AVION") & "</td><td><center> " & origen("N_PLAZAS") & "</center></td><td><center> " & origen("PRECIO_BASE") & "</center></td></tr>")
-			origen.MoveNext
-		loop
-	%>
+    'keeping id of the plane'
+    id_avion_recibido=request.querystring("idavion")
+
+    'Selecting plane with id keeped'
+    Set datos = Conexion.Execute("select IDAVION, AVION, N_PLAZAS, PRECIO_BASE from AVION where IDAVION= " & id_avion_recibido)
+
+    idavion=datos("IDAVION")
+    avion=datos("AVION")
+    num_plazas=datos("N_PLAZAS")
+    precio_base=datos("PRECIO_BASE")
+
+%>
+<div class="container">
+	<form name="formulario_aviones" action="Update.asp" method="post">
+	<table class="striped">
+		<tr>
+			<td> IDAVION </td>
+			<td><input type=text name=idavi readonly value= <% response.write(idavion) %>></td>
+		</tr>
+		<tr>
+			<td> AVION </td>
+			<td><input type=text name=avi value=" <% response.write(avion) %>"></td>
+		</tr>
+		<tr>
+			<td> N_PLAZAS </td>
+			<td><input type=text name=plazas value= <% response.write(num_plazas) %>></td>
+		</tr>
+		<tr>
+			<td> PRECIO_BASE </td>
+			<td><input type=text name=precio value= <% response.write(precio_base) %>></td>
+		</tr>
 	</table>
-    <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
+
+	<input class="waves-effect waves-light btn" type="submit" value="Editar">
+
+	<%
+		response.write("<a href=http://localhost/Practica_DAI/delete_avion.asp?id=" & datos("idavion") & "><input class='waves-effect waves-light btn' type=button value=Borrar></a>")
+	%>
+
+	</form>
 </body>
 </html>
