@@ -36,23 +36,37 @@
 		<canvas></canvas>
 		<canvas></canvas>
 	</div>
-	<h1> Sitio de Administradores </h1>
-	<table class="fa-table">
-		<tr>
-			<th> IDAVION </th>
-			<th> AVION </th>
-			<th> N_PLAZAS </th>
-			<th> PRECIO_BASE </th>
-		</tr>
+    <%
+        'take the last id to know new id'
+        Set consulta = Conexion.Execute("select max(IDAVION) as ultimo_id from AVION")
+        id_avion_nuevo = consulta("ultimo_id")+1
 
-	<% 
-		Set origen = Conexion.Execute("select IDAVION, AVION, N_PLAZAS, PRECIO_BASE from AVION")
-		do while not origen.EOF
-			Response.Write("<tr><td><center><a href=Modificar_vuelos.asp?idavion=" & origen("IDAVION") & ">" & origen("IDAVION") & "</a></center></td><td>" & origen("AVION") & "</td><td><center> " & origen("N_PLAZAS") & "</center></td><td><center> " & origen("PRECIO_BASE") & "</center></td></tr>")
-			origen.MoveNext
-		loop
-	%>
-	</table>
-    <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
+    %>
+	<h1> Añadir vuelo </h1>
+	<div class="container">
+        <form name="insertar_aviones" action="insertaviones.asp" method="post">
+            <table class="striped">
+                <tr>
+                    <td> IDAVION </td>
+                    <td><input type=text name=idavi readonly value= <% response.write(id_avion_nuevo) %>></td>
+                </tr>
+                <tr>
+                    <td> AVION </td>
+                    <td><input type=text name=avi></td>
+                </tr>
+                <tr>
+                    <td> N_PLAZAS </td>
+                    <td><input type=text name=plazas ></td>
+                </tr>
+                <tr>
+                    <td> PRECIO_BASE </td>
+                    <td><input type=text name=precio ></td>
+                </tr>
+            </table>
+
+            <input class="waves-effect waves-light btn" type="submit" value="anyadir">
+
+        </form>
+    </div>
 </body>
 </html>
