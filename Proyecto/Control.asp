@@ -11,7 +11,6 @@
         session("autentificacion") = 1
         response.redirect("http://localhost/Agencia-de-Vuelos/Proyecto/Listado_de_vuelos.asp")
 	else
-        
 		response.redirect("https://google.com")
     end if
 %>
