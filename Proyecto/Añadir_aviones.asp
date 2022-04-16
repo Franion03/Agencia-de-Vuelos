@@ -44,7 +44,7 @@
     %>
 	<h1> Añadir vuelo </h1>
 	<div class="container">
-        <form name="insertar_aviones" action="insertaviones.asp" method="post">
+        <form name="insertar_aviones" action="Add_planes.asp" method="post">
             <table class="striped">
                 <tr>
                     <td> IDAVION </td>
