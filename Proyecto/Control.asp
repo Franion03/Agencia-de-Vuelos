@@ -2,8 +2,8 @@
 <html>
 <body>
 <%
-	usuario = request.form("usuario")
-    password = request.form("password")
+	usuario = request.form("Name")
+    password = request.form("Password")
 
     If usuario = "admin" and password = 1234 then
         session("usuario") = usuario
@@ -12,7 +12,7 @@
         response.redirect("http://localhost/Agencia-de-Vuelos/Proyecto/Listado_de_vuelos.asp")
 	else
         
-		response.redirect("https://github.com")
+		response.redirect("https://google.com")
     end if
 %>
 </body>
