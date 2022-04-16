@@ -52,7 +52,7 @@
 
 %>
 <div class="container">
-	<form name="formulario_aviones" action="Update.asp" method="post">
+	<form name="formulario_aviones" action="Upload.asp" method="post">
 	<table class="striped">
 		<tr>
 			<td> IDAVION </td>
@@ -75,7 +75,7 @@
 	<input class="waves-effect waves-light btn" type="submit" value="Editar">
 
 	<%
-		response.write("<a href=http://localhost/Practica_DAI/delete_avion.asp?id=" & datos("idavion") & "><input class='waves-effect waves-light btn' type=button value=Borrar></a>")
+		response.write("<a href=http://localhost/Agencia-de-Vuelos/Proyecto/Delete_planes.asp?id=" & datos("idavion") & "><input class='waves-effect waves-light btn' type=button value=Borrar></a>")
 	%>
 
 	</form>
