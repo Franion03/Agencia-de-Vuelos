@@ -35,7 +35,7 @@
 
     %>
 	<h1> Añadir vuelo </h1>
-	<div class="container">
+	<div class="sub-main-w3">
         <form name="insertar_aviones" action="Add_planes.asp" method="post">
             <table class="striped">
                 <tr>
