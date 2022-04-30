@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Consultar_reservas.asp"><input type="button" value="Consultar reserva"></a> 
 			</br>
 			</br>
-			<form method="POST" action="Consulta_de_vuelos.asp">
+			<form method="POST" action="insert_booking_fly.asp">
 			
 				<div >
 				Origen: <select name="origen" id="origen">

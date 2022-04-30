@@ -168,7 +168,7 @@
 			<a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/AjaxOpcional/Consultar_reservas.asp"><input type="button" value="Consultar reserva"></a> 
 			</br>
 			</br>
-			<form method="POST" action="Consulta_de_vuelos.asp">
+			<form method="POST" action="insert_booking_fly.asp">
 			
 				<div class="input-field col s12">
 				Origen: <select name="origen" id="origen">
