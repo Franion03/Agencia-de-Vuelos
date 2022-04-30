@@ -22,6 +22,13 @@
     </head>
 	
 	<body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+		
+	</div>
 	<div class="container">
 		<div class="row">
 			<form class="col s12" method="POST" action="Mostrar_consulta_reserva.asp">
