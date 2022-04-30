@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- #include file=conexion.asp --> 
 <html>
-    <head>
+<head>
 	<title>Fran Quiles</title>
+	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="Effect Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
@@ -16,19 +17,19 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
 	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    </head>
+	<!-- //web-fonts -->
+</head>
 <body>
-	<!-- bg effect -->
-	<div id="bg">
-		<canvas></canvas>
-		<canvas></canvas>
-		<canvas></canvas>
-		
-	</div>
  
 <%
 	idavion=request.form("idavi")
@@ -46,10 +47,18 @@
 	Set rs = Conexion.Execute(SentenciaSQL)
 	
 %>
+
+<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<!-- //bg effect -->
 <div class="container">
 	<p> Su reserva se ha realizado correctamente. 
 	<br> 
-	Puede consultar su reserva en el apartado de <a href="http://localhost/Agencia-de-Vuelos/Proyecto/Consultar_reservas.asp"> consultar reserva </a> 
+	Puede consultar su reserva en el apartado de <a href="http://localhost/Practica_DAI/Consultar_reservas.asp"> consultar reserva </a> 
 	<br> 
 	Poniendo su dni y su id de reserva. ( <% response.write(idreserva) %> ) 
 	<br> 
@@ -82,7 +91,8 @@
 
 	</table>
 </div>
-<div class="footer">
+	<!-- copyright -->
+	<div class="footer">
 		
 	</div>
 	<!-- //copyright -->
@@ -93,6 +103,6 @@
 
 	<!-- effect js -->
 	<script src="js/canva_moving_effect.js"></script>
-</body>
+	<!-- //effect js -->
 </body>
 </html>
