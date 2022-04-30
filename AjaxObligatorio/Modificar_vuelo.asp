@@ -67,7 +67,7 @@
 	<input class="waves-effect waves-light btn" type="submit" value="Editar">
 
 	<%
-		response.write("<a href=http://localhost/Agencia-de-Vuelos/Proyecto/Delete_planes.asp?id=" & datos("idavion") & "><input class='waves-effect waves-light btn' type=button value=Borrar></a>")
+		response.write("<a href=http://localhost/Agencia-de-Vuelos/AjaxObligatorio/Delete_planes.asp?id=" & datos("idavion") & "><input class='waves-effect waves-light btn' type=button value=Borrar></a>")
 	%>
 
 	</form>

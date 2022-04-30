@@ -42,7 +42,7 @@
 <div class="container">
 	<p> Su reserva se ha realizado correctamente. 
 	<br> 
-	Puede consultar su reserva en el apartado de <a href="http://localhost/Agencia-de-Vuelos/Proyecto/Consultar_reservas.asp"> consultar reserva </a> 
+	Puede consultar su reserva en el apartado de <a href="http://localhost/Agencia-de-Vuelos/AjaxOpcional/Consultar_reservas.asp"> consultar reserva </a> 
 	<br> 
 	Poniendo su dni y su id de reserva. ( <% response.write(idreserva) %> ) 
 	<br> 

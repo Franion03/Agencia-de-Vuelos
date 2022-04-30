@@ -42,6 +42,12 @@
 	
 	
 %>
+<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+		
+	</div>
 
 <div class="container">
 

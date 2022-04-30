@@ -27,6 +27,8 @@
 		<canvas></canvas>
 		<canvas></canvas>
 		<canvas></canvas>
+		
+	</div>
  
 <%
 	idavion=request.form("idavi")

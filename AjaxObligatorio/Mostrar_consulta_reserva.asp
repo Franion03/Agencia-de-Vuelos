@@ -48,7 +48,7 @@
 			
 			Response.Write("<table class='striped'><tr><td><center> IDRESERVA </center></td><td><input type=text name=idreserv readonly value= " & id_reserve & " ></td></tr> <td><center> APELLIDOS </center></td><td><input type=text name=apellidos readonly value= '" & apellidos & "'></td></tr><td><center> NOMBRE </center></td><td><input type=text name=nombre readonly value= '" & nombre & "'></td></tr><td><center> NIF </center></td><td><input type=text name=dni readonly value= '" & dni & "'></td></tr><td><center> IDVUELO </center></td><td><input type=text name=idvuelo readonly value= " & idvuelo & "></td></tr><td><center> N_ASIENTOS </center></td><td><input type=text name=N_Asientos readonly value= " & N_Asientos & "></td></tr></table><br>")
 		
-			response.write("<a href=http://localhost/Agencia-de-Vuelos/Proyecto/Cancelar_reserva.asp?idreserva=" & id_reserve & "><input class='waves-effect waves-light btn' type=button value='Cancelar reserva'></a>")
+			response.write("<a href=http://localhost/Agencia-de-Vuelos/AjaxObligatorio/Cancelar_reserva.asp?idreserva=" & id_reserve & "><input class='waves-effect waves-light btn' type=button value='Cancelar reserva'></a>")
 		end if		
 
 	%>

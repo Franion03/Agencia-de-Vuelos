@@ -45,7 +45,7 @@
 		loop
 	%>
 	</table>
-    <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
+    <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/AjaxObligatorio/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
 	<div class="footer">
 		
 	</div>

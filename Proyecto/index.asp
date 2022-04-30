@@ -41,6 +41,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<canvas></canvas>
 		<canvas></canvas>
 		<canvas></canvas>
+		
+	</div>
 		<div class="container">
 			<h1> Agencia de vuelos</h1>
 				<div class="row">

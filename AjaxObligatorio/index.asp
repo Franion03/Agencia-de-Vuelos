@@ -222,13 +222,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col s6"></div>
 					<div class="col s6">
-						<a href= "http://localhost/Agencia-de-Vuelos/Proyecto/login.html"><p><center> Login </center></p></a> 
+						<a href= "http://localhost/Agencia-de-Vuelos/AjaxObligatorio/login.html"><p><center> Login </center></p></a> 
 					</div>
 				<div>
 			
 			</br>
 			</br>
-			<a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Consultar_reservas.asp"><input type="button" value="Consultar reserva"></a> 
+			<a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/AjaxObligatorio/Consultar_reservas.asp"><input type="button" value="Consultar reserva"></a> 
 			</br>
 			</br>
 						<div class="input-field col s12">
