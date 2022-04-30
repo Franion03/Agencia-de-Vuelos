@@ -142,7 +142,7 @@
 	<table id="tabla_vuelos" name="tabla_vuelos" border=1>
 		
 	</table>
-	<a href= "http://localhost:8080/prueba/modificaraviones.jsp"><p><center> Ir a JSP </center></p></a> 
+	<a href= "http://localhost:8080/JSPOpcional/modificaraviones.jsp"><p><center> Ir a JSP </center></p></a> 
 </div>
 </body>
 </html>
