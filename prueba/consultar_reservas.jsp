@@ -7,13 +7,26 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!--Import Google Icon Font-->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
 
 	</head>
 	<body>
@@ -32,7 +45,6 @@
 				ResultSet rs = null;
 				boolean errorResultados = false;
 				boolean hayRegistros = false;
-				
 				try
 				{
 					sentencia = connrs.prepareStatement(SQL);
@@ -43,7 +55,6 @@
 				
 					errorResultados = true;				
 			%>
-			
 			<p> ERROR: <%= e.getMessage() %>
 			
 			<%
@@ -52,7 +63,6 @@
 				if(hayRegistros)
 				{
 					%>
-					
 					<table>
 						<tr>
 							<td><b>ID Reserva</b></td>
@@ -67,10 +77,8 @@
                         </tr>
                         
 					<%
-					
 						boolean hecho = false;
 						while(!hecho){
-							
 							String idreserva = rs.getString("RESERVA");
 							String idvuelo = rs.getString("IDVUELO");
 							String apellido = (String) rs.getObject("APELLIDOS");
@@ -80,10 +88,7 @@
 							String cancelado = rs.getString("CANCELADO");
 							String ciudades = (String)rs.getString("CITY");
 							String destino = (String)rs.getString("CIUDADES");
-							
-							
                     %>
-
                                 <tr>
                                     <td><%=idreserva%></td>
                                     <td><%=idvuelo%></td>

@@ -6,12 +6,6 @@
 	<title>Fran Quiles</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-	<!--Import Google Icon Font
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-	<!-- Compiled and minified CSS 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
 	
 	<script type="text/javascript">
 			
@@ -20,8 +14,6 @@
 				var instances = M.FormSelect.init(elems);
 			});
 			
-			// FUNCIONES JAVASCRIPT
-			// Creamos el objeto AJAX httprequest
 
 			function AJAXCrearObjeto(){
 			
@@ -35,92 +27,52 @@
 				   obj = new ActiveXObject("Microsoft.XMLHTTP"); // alert('El navegador utilizado es IE');
 				 }
 				 catch (e) {
-					// alert('El navegador utilizado no está soportado');
 				  }
 			  }
-			  //alert('realizado');
 			  return obj;
 		    }
 			
-			// Recibe y muestra los vuelos que pertenecen a la compania seleccionada
 		    function leerDatos(){
 				 
-				// Comprobamos que se han recibido los datos
 				if (oXML.readyState == 4) {
-					
-					// Accedemos al XML recibido
 					var xml = oXML.responseXML.documentElement;
 					
-					// Accedemos al componente html correspondiente a la tabla
 					var tabla = document.getElementById('tabla_vuelos');
 					
-					// Vaciamos el DIV
 					var definicion_tabla = new String("");
 
-					// cadena con los datos para crear la tabla
 
 					definicion_tabla ='<th>Id Vuelo</th><th>ID Ciudad Origen</th><th>ID Ciudad Destino</th><th>Fecha</th><th>Compa&ntilde;&iacute;a</th> <th> ID Avi&oacute;n</th><th>Duraci&oacute;n</th><th>Plazas Disponibles</th><tr>';
 
-					 // Iteramos cada vuelo
 					var v;
 					var item;  
 					  
 					for (i = 0; i < xml.getElementsByTagName('vuelo').length; i++){
 					
-						// Accedemos al objeto XML 
 						item = xml.getElementsByTagName('vuelo')[i];
 
-						// Recuperamos el identificador de vuelo
 						v = item.getElementsByTagName('idvuelo')[0].firstChild.data;
 								 
-						// Añadimos el campo a la tabla	 
 						definicion_tabla =definicion_tabla+'<td>'+ v +'</td>';
 						 
-						// Recuperamos el id de la ciudad de origen
 						v = item.getElementsByTagName('ciudad_origen')[0].firstChild.data;
 
-						// Añadimos el campo a la tabla
 						definicion_tabla =definicion_tabla+'<td>'+ v +'</td>';
 
-						// Recuperamos el id de la ciudad destino
 						v = item.getElementsByTagName('ciudad_destino')[0].firstChild.data;
-
-						// Añadimos el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v +'</td>';
-
-						// Recuperamos la fecha
 						v = item.getElementsByTagName('fecha')[0].firstChild.data;
-
-						// Añadimos el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
-
-						// Recuperamos la compania
 						v = item.getElementsByTagName('compania')[0].firstChild.data;
-
-						// Añadimos el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
-						
-						// Recuperamos el id de avion
 						v = item.getElementsByTagName('avion')[0].firstChild.data;
-						
-						// Añadimos el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
-						
-						// Recuperamos la duracion del vuelo
 						v = item.getElementsByTagName('duracion')[0].firstChild.data;
-						
-						// Añadimos el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v + '</td>';
-
-						// Recuperamos el numero de planzas disponibles
 						v = item.getElementsByTagName('n_plazas_disponibles')[0].firstChild.data;
-
-						// añadimo el campo a la tabla
 						definicion_tabla= definicion_tabla+'<td>' + v + '</td></tr>';
 						
 					}
-				
-					// rellenamos el objeto html tabla con la definicion construida
 					tabla.innerHTML = definicion_tabla;
 				 
 				}
@@ -138,8 +90,6 @@
 				oXML.onreadystatechange = leerDatos;
 
 				oXML.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-				// lanza la peticion enviando los parametros 
 				oXML.send('IDVUELO='+valorx+'&IDCIUDADORIGEN='+valory);
 		
 				document.getElementById("IDVUELO").value = "";
@@ -162,19 +112,7 @@
 				oXML.onreadystatechange = leerDatos;
 
 				oXML.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-				// lanza la peticion enviando los parametros 
 				oXML.send('idvuelo='+idvuelo+'&idciudadorigen='+idciudadorigen+'&idciudaddestino='+idciudaddestino+'&fecha='+fecha+'&idcompania='+idcompania+'&idavion='+idavion+'&duracion='+duracion+'&plazas='+plazas);
-			
-			
-				/*document.getElementById("IDVUELO").value = "";
-				document.getElementById("IDCIUDADORIGEN").value = "";
-				document.getElementById("IDCIUDADDESTINO").value = "";
-				document.getElementById("FECHA").value = "";
-				document.getElementById("IDCOMPANIA").value = "";
-				document.getElementById("IDAVION").value = "";
-				document.getElementById("DURACION").value = "";
-				document.getElementById("N_PLAZAS_DISPONIBLES").value = "";*/
 			
 			}
 			
