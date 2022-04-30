@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<!-- #include file=conexion.asp --> 
 <html>
 	<head>
 	<title>Fran Quiles</title>

@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html lang="zxx">
 
+<!-- #include file=conexion.asp --> 
 <head>
 	<title>Fran Quiles</title>
 	<!-- Meta tag Keywords -->
