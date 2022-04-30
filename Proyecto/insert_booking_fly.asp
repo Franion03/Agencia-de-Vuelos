@@ -43,7 +43,7 @@
 	ciudad_oriden=request.form("ciudad_oriden")
 	ciudad_destino=request.form("ciudad_destino")
 	
-	SentenciaSQL = "insert into RESERVA values (" & idreserva & ",'" & Apellidos & "','" & Nombre & "','" & dni & "'," & idavion & "," & N_Asientos & ", 0)"
+	SentenciaSQL = "insert into RESERVA values (" & idreserva & "','" & Apellidos & "','" & Nombre & "','" & dni & "'," & idavion & "," & N_Asientos & ", 0)"
 	Set rs = Conexion.Execute(SentenciaSQL)
 	
 %>
