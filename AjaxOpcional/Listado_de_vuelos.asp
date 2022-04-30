@@ -46,8 +46,19 @@
 	%>
 	</table>
     <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/AjaxOpcional/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
-	<div class="footer">
-		
+	    <div class="footer">
+		<div class="container">
+				<div class="row">
+				  <div class="col l6 s12">
+					<h5 class="white-text">Info de la empresa </h5>
+					<p class="grey-text text-lighten-4">Empresa disponible para poder consultar vuelos</p>
+				  </div>
+				  <div class="col l6 s12">
+					<h5 class="white-text">Ubicación</h5>
+					<p class="grey-text text-lighten-4">Elche</p>
+				  </div>
+				</div>
+			</div>
 	</div>
 	<!-- //copyright -->
 
