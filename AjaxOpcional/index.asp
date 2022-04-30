@@ -127,23 +127,17 @@
 
 				oXML.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-				// lanza la peticion enviando los parametros 
 				oXML.send('ciudad_destino='+valorx+'&ciudad_origen='+valory);
 			}
 			
 			function actualizar(){
 			
-				//recuperamos el objeto html desplegable de ciudad origen
 				valorx=document.getElementById("origen").value;
 				alert(valorx)
-				
-				//crea el objeto hhtprequest
 				oXML2 = AJAXCrearObjeto();
 				oXML2.open('POST', 'consulta2.asp');
 				oXML2.onreadystatechange = ponerD;
                 oXML2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-                // lanza la peticion enviando los parametros
                 oXML2.send('ciudad_origen='+valorx);
 			
 			
@@ -153,6 +147,13 @@
 </head>
 
 <body>
+
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
 		<div class="container">
 			<h1> Agencia de vuelos</h1>
 				<div class="row">
