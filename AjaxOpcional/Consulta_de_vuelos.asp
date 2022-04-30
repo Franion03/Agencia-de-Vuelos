@@ -27,7 +27,7 @@
 			
 		%>
 		
-		<h1> Sitio de Administradores </h1>
+		<h1> Administradores </h1>
 		<table class="striped">
 		<tr>
 			<th> IDVUELO </th>

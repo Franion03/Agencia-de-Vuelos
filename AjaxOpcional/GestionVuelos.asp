@@ -122,7 +122,7 @@
 </head>
 <body> 
 <div class="container">
-	<h1> Sitio de Administradores </h1>
+	<h1> Administradores </h1>
 
 	
 	<a class="waves-effect waves-light btn" onClick="consulta();" ><input type="button" value="Consultar"></a>

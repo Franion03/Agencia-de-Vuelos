@@ -28,7 +28,7 @@
 		<canvas></canvas>
 		<canvas></canvas>
 	</div>
-	<h1> Sitio de Administradores </h1>
+	<h1> Administradores </h1>
 	<table class="fa-table">
 		<tr>
 			<th> IDAVION </th>
