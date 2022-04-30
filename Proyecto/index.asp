@@ -36,6 +36,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
+	<!-- bg effect -->
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
 		<div class="container">
 			<h1> Agencia de vuelos</h1>
 				<div class="row">
@@ -52,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</br>
 			<form method="POST" action="Consulta_de_vuelos.asp">
 			
-				<div class="input-field col s12">
+				<div >
 				Origen: <select name="origen" id="origen">
 							<option value="0"> Todos los origenes</option>
 							<%
@@ -64,7 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							%>
 						</select>
 				</div>
-				<div class="input-field col s12">
+				<div >
 				Destino: <select name="Destino" id="Destino">
 							<option value="0"> Todos los destinos</option>
 							<%
@@ -79,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							%>
 						</select>
 				</div>
-				<input class="waves-effect waves-light btn" type="submit" value="Buscar">
+				<input  type="submit" value="Buscar">
 			</form>
 		</div>
 	<div class="footer">
