@@ -36,44 +36,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
-	<!-- bg effect -->
-	<div id="bg">
-		<canvas></canvas>
-		<canvas></canvas>
-		<canvas></canvas>
-	</div>
-	<!-- //bg effect -->
-	<!-- title -->
-	<h1>Agencia de vuelos</h1>
-	<!-- //title -->
-	<!-- content -->
-	<div class="sub-main-w3">
-		<form action="Control.asp" method="post">
-			<h2>Entrar
-				<i class="fas fa-level-down-alt"></i>
-			</h2>
-			<div class="form-style-agile">
-				<label>
-					<i class="fas fa-user"></i>
-					Usuario
-				</label>
-				<input placeholder="Usuario" name="Name" type="text" required="">
-			</div>
-			<div class="form-style-agile">
-				<label>
-					<i class="fas fa-unlock-alt"></i>
-					Contraseña
-				</label>
-				<input placeholder="Contraseña" name="Password" type="password" required="">
-			</div>
-
-			<!-- //checkbox -->
-			<input type="submit" value="Log In">
-		</form>
-	</div>
-	<!-- //content -->
-
-	<!-- copyright -->
+		<div class="container">
+			<h1> Agencia de vuelos</h1>
+				<div class="row">
+					<div class="col s6"></div>
+					<div class="col s6">
+						<a href= "http://localhost/Practica_DAI/login.html"><p><center> Login </center></p></a> 
+					</div>
+				<div>
+			
+			</br>
+			</br>
+			<a class="waves-effect waves-light btn" href="http://localhost/Practica_DAI/Consultar_reservas.asp"><input type="button" value="Consultar reserva"></a> 
+			</br>
+			</br>
+			<form method="POST" action="Consulta_de_vuelos.asp">
+			
+				<div class="input-field col s12">
+				Origen: <select name="origen" id="origen">
+							<option value="0"> Todos los origenes</option>
+							<%
+								Set origen = Conexion.Execute("select IDCIUDAD, CIUDAD from CIUDAD order by CIUDAD")
+								do while not origen.EOF
+									Response.Write("<option value='" & origen("IDCIUDAD") & "'> " & origen("CIUDAD") & "</option>")
+									origen.MoveNext
+								loop
+							%>
+						</select>
+				</div>
+				<div class="input-field col s12">
+				Destino: <select name="Destino" id="Destino">
+							<option value="0"> Todos los destinos</option>
+							<%
+								' Ejecutamos el select e imprimimos todos los resultados en el while
+								Set destino = Conexion.Execute("select IDCIUDAD, CIUDAD from CIUDAD order by CIUDAD")
+								
+								'Mientras hayan datos continua el while
+								do while not destino.EOF
+									Response.Write("<option value='" & destino("IDCIUDAD") & "'> " & destino("CIUDAD") & "</option>")
+									destino.MoveNext
+								loop
+							%>
+						</select>
+				</div>
+				<input class="waves-effect waves-light btn" type="submit" value="Buscar">
+			</form>
+		</div>
 	<div class="footer">
 		
 	</div>
@@ -85,8 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- effect js -->
 	<script src="js/canva_moving_effect.js"></script>
-	<!-- //effect js -->
-
-</body>
+            
+	</body>
 
 </html>

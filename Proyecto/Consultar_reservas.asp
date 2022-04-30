@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<!-- #include file=seguridad.asp --> 
-<!-- #include file=conexion.asp --> 
 <html>
-<head>
+	<head>
 	<title>Fran Quiles</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -21,31 +19,31 @@
 	<link rel="stylesheet" href="css/fontawesome-all.css">
 	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-</head>
-<body> 
-    <div id="bg">
-		<canvas></canvas>
-		<canvas></canvas>
-		<canvas></canvas>
-	</div>
-	<h1> Sitio de Administradores </h1>
-	<table class="fa-table">
-		<tr>
-			<th> IDAVION </th>
-			<th> AVION </th>
-			<th> N_PLAZAS </th>
-			<th> PRECIO_BASE </th>
-		</tr>
+    </head>
+	
+	<body>
+	<div class="container">
+		<div class="row">
+			<form class="col s12" method="POST" action="Mostrar_consulta_reserva.asp">
+			
+				<div class="row">
+					<div class="input-field col s6">
+					  <input placeholder="ID Reserva:" name="idreserva" type="text" class="validate">
+					  <label for="first_name">ID Reserva</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+					  <input placeholder="DNI:" name="dni" type="text" class="validate">
+					  <label for="first_name">DNI</label>
+					</div>
+				</div>
 
-	<% 
-		Set origen = Conexion.Execute("select IDAVION, AVION, N_PLAZAS, PRECIO_BASE from AVION")
-		do while not origen.EOF
-			Response.Write("<tr><td><center><a href=Modificar_vuelo.asp?idavion=" & origen("IDAVION") & ">" & origen("IDAVION") & "</a></center></td><td>" & origen("AVION") & "</td><td><center> " & origen("N_PLAZAS") & "</center></td><td><center> " & origen("PRECIO_BASE") & "</center></td></tr>")
-			origen.MoveNext
-		loop
-	%>
-	</table>
-    <a class="waves-effect waves-light btn" href="http://localhost/Agencia-de-Vuelos/Proyecto/Añadir_aviones.asp"><input type="button" value="Anyadir"></a>
+			<input class="waves-effect waves-light btn" type="submit" value="Enviar">
+			</form>
+		</div>
+	</div>
+		<!-- copyright -->
 	<div class="footer">
 		
 	</div>
@@ -57,5 +55,7 @@
 
 	<!-- effect js -->
 	<script src="js/canva_moving_effect.js"></script>
-</body>
+	<!-- //effect js -->
+        
+	</body>
 </html>
