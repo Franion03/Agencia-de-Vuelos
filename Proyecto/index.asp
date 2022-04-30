@@ -50,7 +50,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col s6">
 						<a href= "http://localhost/Agencia-de-Vuelos/Proyecto/login.html"><p><center> Login </center></p></a> 
 					</div>
-				<div>
+				</div>
 			
 			</br>
 			</br>
